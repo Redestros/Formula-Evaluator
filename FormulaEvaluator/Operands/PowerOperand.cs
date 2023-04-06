@@ -9,7 +9,7 @@ public class PowerOperand : Operand
 
 public class PowerExtractionStrategy : IExtractStrategy
 {
-    public object GetValue(object source)
+    public object GetValue()
     {
         return 7;
     }

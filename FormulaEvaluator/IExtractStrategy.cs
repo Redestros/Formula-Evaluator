@@ -2,5 +2,5 @@
 
 public interface IExtractStrategy
 {
-    public object GetValue(object source);
+    public object GetValue();
 }

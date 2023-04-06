@@ -9,7 +9,7 @@ public class BonusMalusOperand : Operand
 
 public class BonusMalusExtractionStrategy : IExtractStrategy
 {
-    public object GetValue(object source)
+    public object GetValue()
     {
         return 8;
     }

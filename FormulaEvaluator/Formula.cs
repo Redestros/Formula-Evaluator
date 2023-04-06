@@ -17,9 +17,8 @@ public class Formula
     /// <summary>
     /// Evaluate given script
     /// </summary>
-    /// <param name="source">Represents source of data which can be used in token value retrieval</param>
     /// <returns></returns>
-    public async Task<object> Evaluate(object source)
+    public async Task<object> Evaluate()
     {
         // extract tokens from script
         _tokens = ExtractTokens(_script);
@@ -31,7 +30,7 @@ public class Formula
             if (token is Operand operand)
             {
                 // extract value using specified strategy
-                var value = operand.ExtractStrategy.GetValue(source);
+                var value = operand.ExtractStrategy.GetValue();
                 // replace token with extracted value
                 finalScript = finalScript.Replace(token.Syntax, value.ToString());
             }
